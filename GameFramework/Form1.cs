@@ -20,12 +20,12 @@ namespace GameFramework
 
         private void GameLoad(object sender, EventArgs e)
         {
-            gameForm = new Game();
-            GameObject enemy01 = new GameObject(pictureBox1,5);
-            GameObject enemy02 = new GameObject(pictureBox2, 5);
-            GameObject enemy03 = new GameObject(pictureBox3, 15);
-            GameObject enemy04 = new GameObject(pictureBox4, 10);
-            GameObject enemy05 = new GameObject(pictureBox5, 10);
+            gameForm = new Game(10);
+            GameObject enemy01 = new GameObject(pictureBox1);
+            GameObject enemy02 = new GameObject(pictureBox2);
+            GameObject enemy03 = new GameObject(pictureBox3);
+            GameObject enemy04 = new GameObject(pictureBox4);
+            GameObject enemy05 = new GameObject(pictureBox5);
             gameForm.AddObject(enemy01);
             gameForm.AddObject(enemy02);
             gameForm.AddObject(enemy03);

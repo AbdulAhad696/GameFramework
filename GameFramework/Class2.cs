@@ -9,17 +9,15 @@ using System.Drawing;
 using System.Windows.Forms;
 namespace GameFramework
 {
-    class GameObject : Form
+    class GameObject
     {
-        private int Gravity;
-        private string State =  "Falling";
         public PictureBox EnemyBox = new PictureBox();
-        public GameObject(System.Windows.Forms.PictureBox boxname,int gravity) {
-            Gravity = gravity;
+        public GameObject(PictureBox boxname) 
+        {
             EnemyBox = boxname;
         }
-        public int getGravity() {
-            return Gravity;
+        public void AlterPosition(int gravity) {
+            EnemyBox.Top += gravity;
         }
     }
 }

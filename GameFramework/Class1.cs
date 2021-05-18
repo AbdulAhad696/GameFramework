@@ -11,10 +11,13 @@ using System.Collections;
 
 namespace GameFramework
 {
-    partial class Game : Form
+    class Game
     {
-        
+        private int gravity;
         private static ArrayList AllObjects = new ArrayList();
+        public Game(int grav) {
+            gravity = grav;
+        }
         public void AddObject(GameObject objectName) {
             AllObjects.Add(objectName);
         }
@@ -22,8 +25,8 @@ namespace GameFramework
             for (int index=0; index<AllObjects.Count;index++) {
                 GameObject gameobj = (GameObject)AllObjects[index];
                 gameobj.EnemyBox.Show();
-                gameobj.EnemyBox.Top += gameobj.getGravity();
+                gameobj.AlterPosition(gravity);
             }
         }
-    }
+    } 
 }
