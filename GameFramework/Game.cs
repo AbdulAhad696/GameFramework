@@ -13,18 +13,24 @@ namespace GameFramework
 {
     class Game
     {
-        private int gravity;
+        private static Game game;
+        private static int gravity;
         private static ArrayList AllObjects = new ArrayList();
-        public Game(int grav) {
+        private Game(int grav) {
             gravity = grav;
         }
+        public static Game instance(int grav) {
+            if (game==null) {
+                game = new Game(grav);
+            }
+            return game;
+        } 
         public void AddObject(GameObject objectName) {
             AllObjects.Add(objectName);
         }
         public void RenderMovement() { 
             for (int index=0; index<AllObjects.Count;index++) {
                 GameObject gameobj = (GameObject)AllObjects[index];
-                gameobj.EnemyBox.Show();
                 gameobj.AlterPosition(gravity);
             }
         }

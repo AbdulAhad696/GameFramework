@@ -1,7 +1,7 @@
 ﻿
 namespace GameFramework
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -109,7 +109,7 @@ namespace GameFramework
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // Form1
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,7 +120,7 @@ namespace GameFramework
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "GameForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.GameLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
