@@ -63,6 +63,16 @@ namespace GameFramework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boss_Lazer {
+            get {
+                object obj = ResourceManager.GetObject("boss Lazer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boss_ship {
             get {
                 object obj = ResourceManager.GetObject("boss ship", resourceCulture);
@@ -73,10 +83,9 @@ namespace GameFramework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kisspng_sprite_spacecraft_low_poly_2d_computer_graphics_spaceship_5ac8e5d5aca851_0930777515231154777072 {
+        internal static System.Drawing.Bitmap DragonShip {
             get {
-                object obj = ResourceManager.GetObject("kisspng-sprite-spacecraft-low-poly-2d-computer-graphics-spaceship-5ac8e5d5aca851." +
-                        "0930777515231154777072", resourceCulture);
+                object obj = ResourceManager.GetObject("DragonShip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -84,10 +93,19 @@ namespace GameFramework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kisspng_sprite_spacecraft_low_poly_2d_computer_graphics_spaceship_5ac8e5d5aca8511 {
+        internal static System.Drawing.Bitmap Player_Missile {
             get {
-                object obj = ResourceManager.GetObject("kisspng-sprite-spacecraft-low-poly-2d-computer-graphics-spaceship-5ac8e5d5aca8511" +
-                        "", resourceCulture);
+                object obj = ResourceManager.GetObject("Player Missile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlayerShip {
+            get {
+                object obj = ResourceManager.GetObject("PlayerShip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

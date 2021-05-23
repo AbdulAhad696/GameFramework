@@ -16,7 +16,7 @@ namespace GameFramework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameForm());
+            Application.Run(GameForm.instance());
         }
     }
 }

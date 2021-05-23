@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class HorizontalPatrol : ParentMovement
+    class HorizontalPatrol : MainMovement
     {
         private static int functionCall = 0;
-        public override void ObjectMovement(PictureBox enemyBox, int grav)
+        public void ObjectMovement(PictureBox enemyBox, int grav)
         {
             if ((functionCall / 30)%2 == 0)
             {

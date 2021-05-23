@@ -7,11 +7,8 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class MoveRight : MainMovement
+    interface MainMovement
     {
-        public void ObjectMovement(PictureBox enemyBox, int grav)
-        {
-            enemyBox.Left += grav;
-        }
+        void ObjectMovement(PictureBox enemyBox, int grav);
     }
 }

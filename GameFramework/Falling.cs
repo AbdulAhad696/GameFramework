@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class Falling : ParentMovement
+    class Falling : MainMovement
     {
-        public override void ObjectMovement(PictureBox enemyBox, int grav)
+        public void ObjectMovement(PictureBox enemyBox, int grav)
         {
             enemyBox.Top += grav;
         }

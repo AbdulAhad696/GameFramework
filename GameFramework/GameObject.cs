@@ -12,15 +12,19 @@ namespace GameFramework
     class GameObject
     {
         private PictureBox EnemyBox;
-        private ParentMovement movement;
-        public GameObject(PictureBox EnemyBox,ParentMovement movement) 
+        private MainMovement movement;
+        public GameObject(PictureBox EnemyBox,MainMovement movement) 
         {
             this.EnemyBox = EnemyBox;
             this.movement = movement;
         }
-        public void AlterPosition(int gravity) {
+        public void AlterPosition(int gravity)   
+        {
             EnemyBox.Show();
             movement.ObjectMovement(EnemyBox,gravity);
+        }
+        public PictureBox GetPictBox() {
+            return EnemyBox;
         }
         
     }
