@@ -25,11 +25,11 @@ namespace GameFramework
                 Enemy ene1 = new Enemy(objectType);
                 DragonShipCount += 1;
                 if (movementType==MovementType.Right) {
-                    return new GameObject(ene1.GetPictBox(), new MoveRight());
+                    return new GameObject(ene1.GetPictBox(), MoveRight.instance());
                 }
                 else if (movementType == MovementType.Up)
                 {
-                    return new GameObject(ene1.GetPictBox(), new MoveUp());
+                    return new GameObject(ene1.GetPictBox(),MoveUp.instance());
                 }
                 else if (movementType == MovementType.Left)
                 {
@@ -37,11 +37,11 @@ namespace GameFramework
                 }
                 else if (movementType == MovementType.Falling)
                 {
-                    return new GameObject(ene1.GetPictBox(), new Falling());
+                    return new GameObject(ene1.GetPictBox(), Falling.instance());
                 }
                 else if (movementType == MovementType.Patrol)
                 {
-                    return new GameObject(ene1.GetPictBox(), new HorizontalPatrol());
+                    return new GameObject(ene1.GetPictBox(), HorizontalPatrol.instance());
                 }
             }
             else if (objectType == ObjectType.GorgShip)
@@ -50,11 +50,11 @@ namespace GameFramework
                 GorgShipCount += 1;
                 if (movementType == MovementType.Right)
                 {
-                    return new GameObject(ene1.GetPictBox(), new MoveRight());
+                    return new GameObject(ene1.GetPictBox(), MoveRight.instance());
                 }
                 else if (movementType == MovementType.Up)
                 {
-                    return new GameObject(ene1.GetPictBox(), new MoveUp());
+                    return new GameObject(ene1.GetPictBox(),MoveUp.instance());
                 }
                 else if (movementType == MovementType.Left)
                 {
@@ -62,11 +62,11 @@ namespace GameFramework
                 }
                 else if (movementType == MovementType.Falling)
                 {
-                    return new GameObject(ene1.GetPictBox(), new Falling());
+                    return new GameObject(ene1.GetPictBox(), Falling.instance());
                 }
                 else if (movementType == MovementType.Patrol)
                 {
-                    return new GameObject(ene1.GetPictBox(), new HorizontalPatrol());
+                    return new GameObject(ene1.GetPictBox(), HorizontalPatrol.instance());
                 }
             }
             else if (objectType == ObjectType.Player) {
