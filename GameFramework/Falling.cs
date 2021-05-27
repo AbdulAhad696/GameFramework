@@ -7,17 +7,12 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class Falling : MainMovement
+    public class Falling : IMainMovement
     {
-        private static Falling fall;
-        private Falling() { }
-        public static Falling instance()
+        private static MovementType movement = MovementType.Falling;
+        public MovementType GetMovement()
         {
-            if (fall == null)
-            {
-                fall = new Falling();
-            }
-            return fall;
+            return movement;
         }
         public void ObjectMovement(PictureBox enemyBox, int grav)
         {

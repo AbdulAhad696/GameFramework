@@ -7,16 +7,26 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    public class MoveRight : IMainMovement
+    class Static : IMainMovement
     {
-        private static MovementType movement = MovementType.Right;
+        private static Static stat;
+        private Static() { }
+        public static Static instance()
+        {
+            if (stat == null)
+            {
+                stat = new Static();
+            }
+            return stat;
+        }
+        private static MovementType movement = MovementType.Static;
         public MovementType GetMovement()
         {
             return movement;
         }
         public void ObjectMovement(PictureBox enemyBox, int grav)
         {
-            enemyBox.Left += grav;
+            
         }
     }
 }

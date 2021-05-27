@@ -7,8 +7,10 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    interface MainMovement
+    public interface IMainMovement
     {
+
+        MovementType GetMovement();
         void ObjectMovement(PictureBox enemyBox, int grav);
     }
 }

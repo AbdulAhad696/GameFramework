@@ -7,17 +7,12 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class HorizontalPatrol : MainMovement
+    public class HorizontalPatrol : IMainMovement
     {
-        private static HorizontalPatrol patrol;
-        private HorizontalPatrol() { }
-        public static HorizontalPatrol instance()
+        private static MovementType movement = MovementType.Patrol;
+        public MovementType GetMovement()
         {
-            if (patrol == null)
-            {
-                patrol = new HorizontalPatrol();
-            }
-            return patrol;
+            return movement;
         }
         private static int functionCall = 0;
         public void ObjectMovement(PictureBox enemyBox, int grav)

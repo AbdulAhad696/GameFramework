@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework
 {
-    enum MovementType
+    public enum MovementType
     {
         Right,
         Left,
@@ -14,5 +14,6 @@ namespace GameFramework
         Falling,
         Patrol,
         KeyboardInput,
+        Static,
     }
 }

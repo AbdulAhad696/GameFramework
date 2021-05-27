@@ -7,22 +7,24 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class KeyBoardInput : MainMovement
+    public class KeyBoardInput : IMainMovement
     {
-        private static bool GoLeft, GoRight, GoDown, GoUp;
-        private static KeyBoardInput keyInput;
-        private KeyBoardInput(){}
-        
+        private static MovementType movement = MovementType.KeyboardInput;
+        private static KeyBoardInput KeyIn;
+        private KeyBoardInput() { }
         public static KeyBoardInput instance() {
-            if (keyInput == null){
-                keyInput = new KeyBoardInput();
+            if (KeyIn==null) {
+                KeyIn = new KeyBoardInput();
             }
-            return keyInput;
+            return KeyIn;
         }
+        public  MovementType GetMovement()
+        {
+            return movement;
+        }
+        private static bool GoLeft, GoRight, GoDown, GoUp;
         public void ObjectMovement(PictureBox enemyBox, int grav) {
-            GameForm gameForm = GameForm.instance();
-            gameForm.KeyDown += new System.Windows.Forms.KeyEventHandler(KeyDownEvent);
-            gameForm.KeyUp += new System.Windows.Forms.KeyEventHandler(KeyUpEvent);
+            
             MovePlayer(enemyBox,grav);
         }
         private void MovePlayer(PictureBox enemyBox,int grav) {
@@ -43,7 +45,7 @@ namespace GameFramework
                 enemyBox.Top += grav;
             }
         }
-        private void KeyDownEvent(object sender, KeyEventArgs e)
+        public void KeyDownEvent(object sender, KeyEventArgs e)
         {
             if (e.KeyCode==Keys.Left) {
                 GoLeft = true;
@@ -61,7 +63,7 @@ namespace GameFramework
                 GoDown = true;
             }
         }
-        private void KeyUpEvent(object sender, KeyEventArgs e)
+        public void KeyUpEvent(object sender, KeyEventArgs e)
         {
             if (e.KeyCode==Keys.Left) {
                 GoLeft = false;

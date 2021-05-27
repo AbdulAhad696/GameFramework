@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class Enemy
+    public class Enemy
     {
         private ObjectType objectType;
         public Enemy(ObjectType objectType)

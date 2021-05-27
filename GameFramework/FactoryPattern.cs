@@ -8,11 +8,11 @@ using System.Collections;
 
 namespace GameFramework
 {
-    class FactoryPattern
+    public class FactoryPattern
     {
-        
         private static FactoryPattern factPat;
         private static int[] CountArray = { 0,0,0,0};
+        private IMainMovement movement;
         private FactoryPattern() { }
         public static FactoryPattern instance() {
             if (factPat == null){
@@ -20,10 +20,10 @@ namespace GameFramework
             }
             return factPat;
         }
-        public GameObject MakeObjects(PictureBox pictBox,MainMovement movement,ObjectType objectType1){
-            
+        public GameObject MakeObjects(PictureBox pictBox,MovementType movementType1,ObjectType objectType1){
+            PoolPattern poolpat = PoolPattern.instance();
+            movement = poolpat.GetResource(movementType1);
             CountArray[objectType1.GetHashCode()] += 1;
-            
             return new GameObject(pictBox,movement);
         }
     }

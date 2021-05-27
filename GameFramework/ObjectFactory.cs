@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class ObjectFactory
+    public class ObjectFactory
     {
         private static int GorgShipCount=0;
         private static int DragonShipCount=0;
@@ -25,23 +25,23 @@ namespace GameFramework
                 Enemy ene1 = new Enemy(objectType);
                 DragonShipCount += 1;
                 if (movementType==MovementType.Right) {
-                    return new GameObject(ene1.GetPictBox(), MoveRight.instance());
+                    return new GameObject(ene1.GetPictBox(),new MoveRight());
                 }
                 else if (movementType == MovementType.Up)
                 {
-                    return new GameObject(ene1.GetPictBox(),MoveUp.instance());
+                    return new GameObject(ene1.GetPictBox(),new MoveUp());
                 }
                 else if (movementType == MovementType.Left)
                 {
-                    return new GameObject(ene1.GetPictBox(), MoveLeft.instance());
+                    return new GameObject(ene1.GetPictBox(),new MoveLeft());
                 }
                 else if (movementType == MovementType.Falling)
                 {
-                    return new GameObject(ene1.GetPictBox(), Falling.instance());
+                    return new GameObject(ene1.GetPictBox(),new Falling());
                 }
                 else if (movementType == MovementType.Patrol)
                 {
-                    return new GameObject(ene1.GetPictBox(), HorizontalPatrol.instance());
+                    return new GameObject(ene1.GetPictBox(),new HorizontalPatrol());
                 }
             }
             else if (objectType == ObjectType.GorgShip)
@@ -50,23 +50,23 @@ namespace GameFramework
                 GorgShipCount += 1;
                 if (movementType == MovementType.Right)
                 {
-                    return new GameObject(ene1.GetPictBox(), MoveRight.instance());
+                    return new GameObject(ene1.GetPictBox(),new MoveRight());
                 }
                 else if (movementType == MovementType.Up)
                 {
-                    return new GameObject(ene1.GetPictBox(),MoveUp.instance());
+                    return new GameObject(ene1.GetPictBox(),new MoveUp());
                 }
                 else if (movementType == MovementType.Left)
                 {
-                    return new GameObject(ene1.GetPictBox(), MoveLeft.instance());
+                    return new GameObject(ene1.GetPictBox(),new MoveLeft());
                 }
                 else if (movementType == MovementType.Falling)
                 {
-                    return new GameObject(ene1.GetPictBox(), Falling.instance());
+                    return new GameObject(ene1.GetPictBox(),new Falling());
                 }
                 else if (movementType == MovementType.Patrol)
                 {
-                    return new GameObject(ene1.GetPictBox(), HorizontalPatrol.instance());
+                    return new GameObject(ene1.GetPictBox(),new HorizontalPatrol());
                 }
             }
             else if (objectType == ObjectType.Player) {

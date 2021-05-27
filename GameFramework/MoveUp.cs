@@ -7,19 +7,16 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class MoveUp : MainMovement
+    public class MoveUp : IMainMovement
     {
-        private static MoveUp up;
-        private MoveUp() { }
-        public static MoveUp instance() {
-            if (up == null ) {
-                up = new MoveUp();
-            }
-            return up;
+        private static MovementType movement = MovementType.Up;
+        public  MovementType GetMovement(){
+            return movement;
         }
         public void ObjectMovement(PictureBox enemyBox, int grav)
         {
             enemyBox.Top -= grav;
         }
+        
     }
 }

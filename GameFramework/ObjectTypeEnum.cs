@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework
 {
-    enum ObjectType
+    public enum ObjectType
     {
         BossShip,
         DragonShip,

@@ -7,15 +7,12 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    class MoveLeft : MainMovement
+    public class MoveLeft : IMainMovement
     {
-        private static MoveLeft left;
-        private MoveLeft() { }
-        public static MoveLeft instance() {
-            if (left==null) {
-                left = new MoveLeft();
-            }
-            return left;
+        private static MovementType movement = MovementType.Left;
+        public MovementType GetMovement()
+        {
+            return movement;
         }
         public void ObjectMovement(PictureBox enemyBox,int grav) {
             enemyBox.Left -= grav;

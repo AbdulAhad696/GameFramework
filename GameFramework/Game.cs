@@ -11,7 +11,7 @@ using System.Collections;
 
 namespace GameFramework
 {
-    class Game
+    public class Game
     {
         private static Game game;
         private static int gravity;
