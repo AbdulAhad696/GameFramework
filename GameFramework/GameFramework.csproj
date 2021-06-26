@@ -49,9 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BehaviourTypeEnum.cs" />
+    <Compile Include="CollisionDetection.cs" />
+    <Compile Include="CollisionInterface.cs" />
+    <Compile Include="DecreaseHealth.cs" />
+    <Compile Include="KillObject.cs" />
     <Compile Include="Static.cs" />
     <Compile Include="PoolPattern.cs" />
-    <Compile Include="Enemy.cs" />
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="ObjectTypeEnum.cs" />
     <Compile Include="MovementTypeEnum.cs" />
@@ -67,7 +71,6 @@
     <Compile Include="MoveLeft.cs" />
     <Compile Include="MoveRight.cs" />
     <Compile Include="MoveUp.cs" />
-    <Compile Include="ObjectFactory.cs" />
     <Compile Include="HorizontalPatrol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -76,6 +79,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

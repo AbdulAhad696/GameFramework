@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameFramework
 {
-    public enum ObjectType
+    public enum BehaviourType
     {
-        BossShip,
-        DragonShip,
-        GorgShip,
-        Player,
-        Missile
+        Die,
+        HealthDecrease,
     }
 }

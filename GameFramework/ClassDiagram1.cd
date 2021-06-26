@@ -1,107 +1,145 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GameFramework.ObjectFactory" Collapsed="true">
-    <Position X="8.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>CAAAAAAEAAAAAAAAACAAAAIAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ObjectFactory.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="GameFramework.MoveUp">
-    <Position X="0.5" Y="2.25" Width="1.5" />
+    <Position X="6.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>MoveUp.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="GameFramework.MoveRight" Collapsed="true">
-    <Position X="4.75" Y="1.5" Width="1.5" />
+  <Class Name="GameFramework.MoveRight">
+    <Position X="8.25" Y="12" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>MoveRight.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="GameFramework.MoveLeft" Collapsed="true">
-    <Position X="4.5" Y="2.5" Width="1.5" />
+  <Class Name="GameFramework.MoveLeft">
+    <Position X="9.75" Y="12.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>MoveLeft.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="GameFramework.KeyBoardInput" Collapsed="true">
-    <Position X="2.75" Y="2" Width="1.5" />
+  <Class Name="GameFramework.KeyBoardInput">
+    <Position X="14" Y="12" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAwAAEAAAAAIAAgAAAAAAAAAEBAAAAABAAAAAgAAAA=</HashCode>
+      <HashCode>EAAgAAEAAAAEIAAgAAAIAAAAAEBAAAAABAAAAAgABAA=</HashCode>
       <FileName>KeyBoardInput.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.19" />
   </Class>
-  <Class Name="GameFramework.HorizontalPatrol" Collapsed="true">
-    <Position X="2.75" Y="3" Width="1.5" />
+  <Class Name="GameFramework.HorizontalPatrol">
+    <Position X="4.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAQAAAAAEA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAQAAAABAA=</HashCode>
       <FileName>HorizontalPatrol.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="GameFramework.GameObject" Collapsed="true">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+  <Class Name="GameFramework.GameObject">
+    <Position X="6" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAEAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIAAAEAAAAgAAAAAAAAEAAAAAAAAAAgACQAAA=</HashCode>
       <FileName>GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameFramework.Game" Collapsed="true">
-    <Position X="8.5" Y="1.75" Width="1.5" />
+  <Class Name="GameFramework.Game">
+    <Position X="3" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAAAAAACAAABABAABAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAEAAAAACCCAABABAABAIAAAAAAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameFramework.Falling" Collapsed="true">
-    <Position X="1.25" Y="3.75" Width="1.5" />
+  <Class Name="GameFramework.Falling">
+    <Position X="2" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Falling.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="GameFramework.FactoryPattern" Collapsed="true">
-    <Position X="8" Y="4.5" Width="1.5" />
+  <Class Name="GameFramework.FactoryPattern">
+    <Position X="3" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAhAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAIAAABAAAAAAAAAAhAAAAA=</HashCode>
       <FileName>FactoryPattern.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameFramework.Enemy" Collapsed="true">
-    <Position X="8.5" Y="3" Width="1.5" />
+  <Class Name="GameFramework.CollisionDetection">
+    <Position X="6" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAICIAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>Enemy.cs</FileName>
+      <HashCode>AJAAgAAAAAAAIAAAAAAAAAAAAAAAAAAAIAAAAAAAACA=</HashCode>
+      <FileName>CollisionDetection.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="GameFramework.IMainMovement" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+  <Class Name="GameFramework.DecreaseHealth">
+    <Position X="15" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DecreaseHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameFramework.KillObject">
+    <Position X="12.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>KillObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameFramework.PoolPattern">
+    <Position X="6" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAEAAAAAAIAAAAAAABAAgAAAAAACAAAAAA=</HashCode>
+      <FileName>PoolPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameFramework.Static">
+    <Position X="11.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAgAAAAAAAAAABAAgAAAAAAAAAABAA=</HashCode>
+      <FileName>Static.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="GameFramework.IMainMovement">
+    <Position X="8.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>MainMovement.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="GameFramework.ObjectType" Collapsed="true">
-    <Position X="8.25" Y="1.25" Width="1.5" />
+  <Interface Name="GameFramework.ICollisionBehaviour">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CollisionInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GameFramework.ObjectType">
+    <Position X="3" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAA=</HashCode>
       <FileName>ObjectTypeEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="GameFramework.MovementType" Collapsed="true">
-    <Position X="8" Y="3.5" Width="1.5" />
+  <Enum Name="GameFramework.MovementType">
+    <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAACACAQAAAAAI=</HashCode>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAECACAQAAAAAI=</HashCode>
       <FileName>MovementTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameFramework.BehaviourType">
+    <Position X="3" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>BehaviourTypeEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

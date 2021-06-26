@@ -7,10 +7,11 @@ using System.Windows.Forms;
 
 namespace GameFramework
 {
-    public interface IMainMovement
+    public class DecreaseHealth : ICollisionBehaviour
     {
+        public void CollisionEventAction(GameObject ObjectToHurt) {
+            ObjectToHurt.DecreaseHealth(50);
 
-        MovementType GetMovement();
-        void ObjectMovement(GameObject objBox, int grav);
+        }
     }
 }

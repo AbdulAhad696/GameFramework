@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
+
 
 namespace GameFramework
 {
@@ -18,31 +20,46 @@ namespace GameFramework
             }
             return KeyIn;
         }
+        private GameObject gameobj;
         public  MovementType GetMovement()
         {
             return movement;
         }
-        private static bool GoLeft, GoRight, GoDown, GoUp;
-        public void ObjectMovement(PictureBox enemyBox, int grav) {
-            
-            MovePlayer(enemyBox,grav);
+        private static bool GoLeft, GoRight, GoDown, GoUp,FireWeapon;
+        public void ObjectMovement(GameObject objBox, int grav) {
+            this.gameobj = objBox;
+            MovePlayer(objBox,grav);
         }
-        private void MovePlayer(PictureBox enemyBox,int grav) {
-            if (GoLeft && enemyBox.Left > 10)
+        private void MovePlayer(GameObject objBox, int grav) {
+            PictureBox pictBox = objBox.GetPictBox();
+
+            if (GoLeft && pictBox.Left > 10)
             {
-                enemyBox.Left -= grav;
+                pictBox.Left -= grav;
             }
-            if (GoRight && enemyBox.Left < 716)
+            if (GoRight && pictBox.Left < 1900)
             {
-                enemyBox.Left += grav;
+                pictBox.Left += grav;
             }
-            if (GoUp && enemyBox.Top > 0)
+            if (GoUp && pictBox.Top > 0)
             {
-                enemyBox.Top -= grav;
+                pictBox.Top -= grav;
             }
-            if (GoDown && enemyBox.Top < 400)
+            if (GoDown && pictBox.Top < 400)
             {
-                enemyBox.Top += grav;
+                pictBox.Top += grav;
+            }
+            if (FireWeapon) {
+                GameObject weapon=objBox.ReturnWeapon();
+                PictureBox weaponBox = weapon.GetPictBox();
+                weaponBox.Show();
+                
+                weaponBox.Top -= grav;
+                if (weaponBox.Top+56<0) {
+                    weaponBox.Hide();
+                    weaponBox.Location = new Point(-500, -200);
+                    FireWeapon = false;
+                }
             }
         }
         public void KeyDownEvent(object sender, KeyEventArgs e)
@@ -61,6 +78,14 @@ namespace GameFramework
             if (e.KeyCode == Keys.Down)
             {
                 GoDown = true;
+            }
+            if (e.KeyCode == Keys.Space && FireWeapon==false) {
+                FireWeapon = true;
+                PictureBox pictBox = gameobj.GetPictBox();
+                GameObject weapon = gameobj.ReturnWeapon();
+                PictureBox weaponBox = weapon.GetPictBox();
+                weaponBox.Show();
+                weaponBox.Location = new Point(pictBox.Location.X + 50, pictBox.Location.Y + 35);
             }
         }
         public void KeyUpEvent(object sender, KeyEventArgs e)

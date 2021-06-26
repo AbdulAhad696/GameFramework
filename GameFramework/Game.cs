@@ -16,6 +16,9 @@ namespace GameFramework
         private static Game game;
         private static int gravity;
         private static ArrayList AllObjects = new ArrayList();
+        private static ArrayList AllCollisions = new ArrayList();
+        private static bool gameend=false;
+        private static int score;
         private Game(int grav) {
             gravity = grav;
         }
@@ -28,10 +31,42 @@ namespace GameFramework
         public void AddObject(GameObject objectName) {
             AllObjects.Add(objectName);
         }
+        public void AddCollision(CollisionDetection collision) {
+            AllCollisions.Add(collision);
+        }
+        public int getscore() {
+            return score;
+        }
+        public static void removeObject(GameObject gameobj) {
+            AllObjects.Remove(gameobj);
+            if (gameobj.GetobjType()==ObjectType.DragonShip || gameobj.GetobjType() == ObjectType.GorgShip) {
+                score += 100;
+            }
+            if (gameobj.GetobjType()==ObjectType.Player) {
+                gameend = true;
+            }
+            if (AllObjects.Count<2) {
+                gameend = true;
+            }
+        }
+        public bool CheckStatus() {
+            return gameend;
+        }
         public void RenderMovement() { 
             for (int index=0; index<AllObjects.Count;index++) {
                 GameObject gameobj = (GameObject)AllObjects[index];
-                gameobj.AlterPosition(gravity);
+                if (gameobj.GetobjType() != ObjectType.Missile)
+                {
+                    gameobj.AlterPosition(gravity);
+                    foreach (CollisionDetection collision in AllCollisions)
+                    {
+                        collision.Detect();
+                    }
+                    if (gameobj.GetPictBox().Top + 100 > 1900)
+                    {
+                        removeObject(gameobj);
+                    }
+                }
             }
         }
     } 

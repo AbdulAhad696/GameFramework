@@ -15,15 +15,15 @@ namespace GameFramework
             return movement;
         }
         private static int functionCall = 0;
-        public void ObjectMovement(PictureBox enemyBox, int grav)
+        public void ObjectMovement(GameObject objBox, int grav)
         {
-            if ((functionCall / 30) % 2 == 0)
+            if ((functionCall / 120) % 2 == 0)
             {
-                enemyBox.Left -= grav;
+                objBox.GetPictBox().Left -= grav;
             }
             else
             {
-                enemyBox.Left += grav;
+                objBox.GetPictBox().Left += grav;
             }
             functionCall += 1;
         }

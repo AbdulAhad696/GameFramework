@@ -14,9 +14,9 @@ namespace GameFramework
         {
             return movement;
         }
-        public void ObjectMovement(PictureBox enemyBox, int grav)
+        public void ObjectMovement(GameObject objBox, int grav)
         {
-            enemyBox.Top += grav;
+            objBox.GetPictBox().Top += grav;
         }
     }
 }

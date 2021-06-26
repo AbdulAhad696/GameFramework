@@ -63,7 +63,7 @@ namespace GameFramework
             OccupiedObjects.Add(movement);
             return movement;
         }
-        public void DeleteObject(GameObject obj) {
+        public void DeleteObject(IMainMovement obj) {
             OccupiedObjects.Remove(obj);
             FreeObjects.Add(obj);
         }
